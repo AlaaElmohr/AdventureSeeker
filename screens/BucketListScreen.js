@@ -6,11 +6,11 @@ import HeaderComponent from '../components/HeaderComponent';
 import BucketListCard from '../components/BucketListCard';
 class BucketListScreen extends Component {
   static navigationOptions = {
-    tabBarLabel:'Saved',
-    tabBarIcon: ({ tintColor }) => {
+    drawerLabel:'Saved',
+    drawerIcon: ({ tintColor }) => {
       return <Icon name="heart" type="material-community"  color={tintColor} />;
     },
-    tabBarOptions: {
+    contentOptions: {
       activeTintColor: '#FF4F93',
       inactiveTintColor: '#A6A6A6',
       labelStyle: {

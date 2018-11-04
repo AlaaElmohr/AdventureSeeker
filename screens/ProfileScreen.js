@@ -7,11 +7,11 @@ import StoryCard from '../components/StoryCard';
 
 class ProfileScreen extends Component {
     static navigationOptions = {
-        tabBarLabel:'Profile',
-        tabBarIcon: ({ tintColor }) => {
+      drawerLabel:'Profile',
+      drawerIcon: ({ tintColor }) => {
           return <Icon name="account-outline" type="material-community"  color={tintColor} />;
         },
-        tabBarOptions: {
+        contentOptions: {
           activeTintColor: '#FF4F93',
           inactiveTintColor: '#A6A6A6',
           labelStyle: {

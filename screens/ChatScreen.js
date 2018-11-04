@@ -6,11 +6,11 @@ import HeaderComponent from '../components/HeaderComponent';
 import ChatCard from '../components/ChatCard';
 class ChatScreen extends Component {
   static navigationOptions = {
-    tabBarLabel:'Chat',
-    tabBarIcon: ({ tintColor }) => {
+    drawerLabel:'Chat',
+    drawerIcon: ({ tintColor }) => {
       return <Icon name="forum" type="material-community"  color={tintColor} />;
     },
-    tabBarOptions: {
+    contentOptions: {
       activeTintColor: '#FF4F93',
       inactiveTintColor: '#A6A6A6',
       labelStyle: {

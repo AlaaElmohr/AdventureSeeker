@@ -31,10 +31,11 @@ class HeaderComponent extends Component {
     
   }
   displayIcon(){
-   if(this.props.goBack){
+   if(this.props.goBack === 'true'){
     return(<Icon type="material-community" name='arrow-left' color='#000' iconStyle={styles.iconMenuStyle}  onPress={() => this.props.navigation.goBack()} />)
-   }else{
-    return(<Icon name="menu" type="material-community"  color='#000' iconStyle={styles.iconMenuStyle}/>)
+   }
+  if(this.props.goBack === 'false'){
+    return(<Icon name="menu" type="material-community"  color='#000' iconStyle={styles.iconMenuStyle} onPress={()=>{this.props.navigation.openDrawer()}}/>)
    }
   }
   renderContent(){

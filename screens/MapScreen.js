@@ -18,11 +18,11 @@ const entries = [
 ];
 class MapScreen extends Component {
     static navigationOptions = {
-        tabBarLabel:'Map',
-        tabBarIcon: ({ tintColor }) => {
+        drawerLabel:'Map',
+        drawerIcon: ({ tintColor }) => {
           return <Icon name="map" type="material-community"  color={tintColor} />;
         },
-        tabBarOptions: {
+        contentOptions: {
           activeTintColor: '#FF4F93',
           inactiveTintColor: '#A6A6A6',
           labelStyle: {

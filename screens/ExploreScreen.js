@@ -28,11 +28,11 @@ class ExploreScreen extends Component {
     static navigationOptions = {
   
         header:null,
-        tabBarLabel:'Explore',
-        tabBarIcon: ({ tintColor }) => {
+        drawerLabel:'Explore',
+        drawerIcon: ({ tintColor }) => {
           return <Icon name="apple-safari" type="material-community"  color={tintColor} />;
         },
-        tabBarOptions: {
+        contentOptions: {
           activeTintColor: '#FF4F93',
           inactiveTintColor: '#A6A6A6',
           labelStyle: {
@@ -56,7 +56,7 @@ class ExploreScreen extends Component {
         
         <ScrollView stickyHeaderIndices={[0]} style={styles.containerStyle}>
         <View>
-         <HeaderComponent title="Home" goBack="false" imageBackground="false" />
+         <HeaderComponent title="Home" goBack="false" imageBackground="false" navigation={this.props.navigation}/>
         </View>
         <View style={[styles.contentStyle,styles.inlineStyle]}>       
         <Title text="Explore Adventures"/>

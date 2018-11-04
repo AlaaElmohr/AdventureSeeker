@@ -39,7 +39,7 @@ class Slides extends Component {
       return (
         <View style={styles.wrapperStyle} key={slide.title}>
         <View
-          key={slide.title}
+          key={slide.image}
           style={styles.slideStyle}
         >
           <Image source={slide.image} />

@@ -7,11 +7,11 @@ import TabViewComponent from '../components/TabViewComponent';
 class AdventuresListScreen extends Component {
 
   static navigationOptions = {
-    tabBarLabel:'Events',
-    tabBarIcon: ({ tintColor }) => {
+    drawerLabel:'Events',
+    drawerIcon: ({ tintColor }) => {
       return <Icon name="bullseye" type="material-community"  color={tintColor} />;
     },
-    tabBarOptions: {
+    contentOptions: {
       activeTintColor: '#FF4F93',
       inactiveTintColor: '#A6A6A6',
       labelStyle: {
@@ -25,7 +25,7 @@ class AdventuresListScreen extends Component {
     return (
       <View style={{flex:1}}>
       <View>
-        <HeaderComponent title="Adventures" goBack="true" imageBackground="false"/>
+        <HeaderComponent title="Adventures" goBack="false" imageBackground="false" navigation={this.props.navigation}/>
       </View>
        <TabViewComponent />      
       </View>
