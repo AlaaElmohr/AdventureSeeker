@@ -28,10 +28,10 @@ class AdventureDetailScreen extends Component {
         <View style={{padding:20}}>
         <Text style={styles.titleStyle}>Gold Coast Surfing</Text>
         <View style={styles.ptop10}>
-        <TitleWithIcon icon="pin" type="material-community" title="Super Banks" colorIcon="#A6A6A6" colorTitle="#fff"/>
+        <TitleWithIcon icon="pin" type="material-community" title="Super Banks" colorIcon="#A5A09A" colorTitle="#fff"/>
         </View>
         <View style={styles.ptop10}>
-        <TitleWithIcon icon="clock" type="material-community" title="2.5 hours totally" colorIcon="#A6A6A6" colorTitle="#fff"/>
+        <TitleWithIcon icon="clock" type="material-community" title="2.5 hours totally" colorIcon="#A5A09A" colorTitle="#fff"/>
         </View>
         </View>
          <FooterComponent title="Learn More" theme="light"/>

@@ -15,11 +15,15 @@ import ProfileScreen from './screens/ProfileScreen';
 import TripScreen from './screens/TripScreen';
 import AdventuresListScreen from './screens/AdventuresListScreen';
 import ExploreScreen from './screens/ExploreScreen';
-import CityDetailScreen from './screens/CityDetailScreen';
+import MyAdventureScreen from './screens/MyAdventureScreen';
 import AdventureDetailScreen from './screens/AdventureDetailScreen';
 import AdventureDetailAboutScreen from './screens/AdventureDetailAboutScreen';
-
+import BucketListScreen from './screens/BucketListScreen';
 import DestinationsListScreen from './screens/DestinationsListScreen';
+import ChatScreen from './screens/ChatScreen';
+import MyTicketScreen from './screens/MyTicketScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import PickSlotScreen from './screens/PickSlotScreen';
 
 EStyleSheet.build(Colors);
 export default class App extends React.Component {
@@ -40,32 +44,48 @@ export default class App extends React.Component {
 
   render() {
     const RootStack = createBottomTabNavigator({
-     // Welcome: { screen: WelcomeScreen },
-      //SignUp: { screen: SignUpScreen },
-      //SignIn: { screen: SignInScreen },
-      //sPickAdventures: { screen: PickAdventuresScreen },
-      Main: {
+     //Welcome: { screen: WelcomeScreen },
+     //SignUp: { screen: SignUpScreen },
+     //SignIn: { screen: SignInScreen },
+     //PickAdventures: { screen: PickAdventuresScreen },
+    Main: {
+
         screen: createBottomTabNavigator({
-          Explore: {   
+          Explore: {  
+             
             screen: createStackNavigator({
-            DestinationsList: { screen: DestinationsListScreen },
-            CityDetail: { screen: CityDetailScreen },
             Explore: { screen: ExploreScreen },
+            DestinationsList: { screen: DestinationsListScreen },
             AdventureDetail: { screen: AdventureDetailScreen },
             AdventureDetailAbout: { screen: AdventureDetailAboutScreen },
           },{
             navigationOptions: {
-              tabBarVisible: false 
+              tabBarVisible: false ,
+              tabBarLabel:'Profile',
+              tabBarIcon: ({ tintColor }) => {
+                return <Icon name="account-outline" type="material-community"  color={tintColor} />;
+              },
+              tabBarOptions: {
+                activeTintColor: '#FF4F93',
+                inactiveTintColor: '#A6A6A6',
+                labelStyle: {
+                  fontSize: 11,
+                  fontFamily: 'proxima-nova-bold'
+                },
+              },
             }}
           )
           
          },
-          //PickAdventures: { screen: PickAdventuresScreen },
-          //AdventuresList: { screen: AdventuresListScreen },
+          AdventuresList: { screen: AdventuresListScreen },
+          Map: { screen: MapScreen},
+          Trip: { screen: TripScreen },
+          Profile: { screen: ProfileScreen },
+          Chat:{screen:ChatScreen},
+          BucketList:{screen:BucketListScreen}
 
-          //Map: { screen: MapScreen},
-          //Trip: { screen: TripScreen },
-          //Profile: { screen: ProfileScreen },
+
+        
          
         }, {
           tabBarPosition: 'bottom',
@@ -110,7 +130,7 @@ export default class App extends React.Component {
             AdventureDetail: { screen: AdventureDetailScreen },
             AdventureDetailAbout: { screen: AdventureDetailAboutScreen },
             DestinationsList: { screen: DestinationsListScreen },
-            CityDetail: { screen: CityDetailScreen },
+            MyAdventure: { screen: MyAdventureScreen },
             
           },{
             navigationOptions: {

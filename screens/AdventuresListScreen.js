@@ -16,7 +16,7 @@ class AdventuresListScreen extends Component {
       inactiveTintColor: '#A6A6A6',
       labelStyle: {
         fontSize: 11,
-        fontFamily: 'proxima-nova'
+        fontFamily: 'proxima-nova-bold'
       },
     },
   };

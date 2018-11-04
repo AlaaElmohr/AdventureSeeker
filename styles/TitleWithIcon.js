@@ -9,7 +9,7 @@ inlineStyle:{
 titleStyle:{
   fontFamily:'proxima-nova-semibold',
   marginLeft:10,
-  fontSize:13
+  fontSize:15
 },
  
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Text,View,Image, Dimensions } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { Text,View,Image, Dimensions, TouchableOpacity } from 'react-native';
+import { Icon, Button  } from 'react-native-elements';
 const imageWidth = Dimensions.get('window').width;
 import Star from './Star';
 import styles from '../styles/Card';
@@ -41,11 +41,10 @@ class Card extends Component {
             <Text style={styles.context}  style={styles.contextStyle} numberOfLines={2}>
               { this.props.context }
             </Text>
-            <View style={styles.starContainerStyle}>
-              {this.renderRating(this.props.rate)}
-            </View>
+              <Star rate={this.props.rate} />
             
          </View>
+
     );
   }
 }

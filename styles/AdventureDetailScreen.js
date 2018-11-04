@@ -5,7 +5,7 @@ const styles = EStyleSheet.create({
     titleStyle:{
      color:'$whiteColor',
       fontFamily:'proxima-nova-bold',
-      fontSize:24,
+      fontSize:27,
 
     },
     ptop10:{

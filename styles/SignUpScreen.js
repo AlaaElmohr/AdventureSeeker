@@ -34,8 +34,7 @@ const styles = EStyleSheet.create({
   },
   loginStyle:{
    flexDirection:'row',
-   justifyContent: 'center',
-   alignItems: 'center',
+   justifyContent:'center',
    marginBottom:80
   },
   textStyle:{

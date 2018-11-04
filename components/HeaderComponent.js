@@ -20,7 +20,12 @@ class HeaderComponent extends Component {
   }
   displayText(){
     if(this.props.imageBackground === 'false'){
-     return(<Text style={styles.titleStyle}>{this.props.title}</Text>)
+     return(
+       <View>
+       <Text style={styles.titleStyle}>{this.props.title}</Text>
+       <Text style={styles.spanStyle}>{this.props.span}</Text>
+       </View>
+       )
     }
    
     
@@ -49,7 +54,7 @@ class HeaderComponent extends Component {
   render() {
     if(this.props.imageBackground==='true'){
     return(
-      <ImageBackground style={[styles.wrapperStyle,{height:this.state.height}]} source={require('../assets/images/a-2.jpg')}>
+      <ImageBackground style={[styles.wrapperStyle,{height:this.state.height}]} source={this.props.image}>
          {this.renderContent()}
       </ImageBackground>
     );

@@ -7,6 +7,7 @@ import HeaderComponent  from '../components/HeaderComponent';
 import Title from '../components/Title';
 import Card from '../components/Card';
 import styles from '../styles/ExploreScreen';
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 const sliderWidth = Dimensions.get('window').width;
 const itemHeight = Dimensions.get('window').height;
 const entries = [
@@ -23,7 +24,7 @@ const Recommendation= [
 
 
 class ExploreScreen extends Component {
-   
+
     static navigationOptions = {
   
         header:null,
@@ -42,10 +43,12 @@ class ExploreScreen extends Component {
         },
       };
 
-     _renderItem ({item, index}, parallaxProps, col) {
+     _renderItem ({item, index}, parallaxProps, col,navigate) {
         return (
-          <Card title={item.title} span={item.span} context={item.context} image={item.thumbnail} rate={item.ra} col={col}/>
-        );
+          <View>
+          <Card title={item.title} span={item.span} context={item.context} image={item.thumbnail} rate={item.rate} col={col} OnPress={ ()=> this.goTo}/>
+          </View>
+          );
     }
   render() {
     return (
@@ -60,6 +63,7 @@ class ExploreScreen extends Component {
         <Button title="View all" titleStyle={styles.titleButtonStyle} buttonStyle={styles.buttonStyle} color="#FF4F93" onPress={()=>{this.props.navigation.navigate('DestinationsList')}}/>
         </View>
         <View style={{marginLeft:-35}}>
+
         <Carousel
           sliderWidth={sliderWidth}
           itemWidth={sliderWidth-100}
@@ -73,10 +77,10 @@ class ExploreScreen extends Component {
         </View>
         <View style={[styles.contentStyle,styles.inlineStyle]}>       
         <Title text="Recommendation for you"/>
-        <Button title="View all" titleStyle={styles.titleButtonStyle} buttonStyle={styles.buttonStyle} color="#FF4F93" onPress={()=>{this.props.navigation.navigate('AdventureDetail')}}/>
+        <Button title="View all" titleStyle={styles.titleButtonStyle} buttonStyle={styles.buttonStyle} color="#FF4F93" onPress={()=>{this.props.navigation.navigate('AdventuresList')}}/>
         </View>
         <View>
-        <Carousel
+        <Carousel  
           sliderWidth={sliderWidth}
           itemWidth={sliderWidth/3}
           itemHeight={itemHeight}
@@ -85,6 +89,7 @@ class ExploreScreen extends Component {
           hasParallaxImages={true}
           windowSize={1} 
           col={3}
+          navigate={this.props.navigation}
           />
         </View>
         <View style={[styles.contentStyle,styles.inlineStyle]}>       

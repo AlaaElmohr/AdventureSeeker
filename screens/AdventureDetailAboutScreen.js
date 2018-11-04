@@ -15,10 +15,11 @@ class AdventureDetailAboutScreen extends Component {
 
   render() {
     return (
-        <ScrollView  stickyHeaderIndices={[0,2]}  style={styles.containerStyle}>
+      <View style={styles.containerStyle}>
+        <ScrollView  stickyHeaderIndices={[0]}  >
 
         <View>
-        <HeaderComponent title="Adventureeeeeee Detail" goBack="true" imageBackground="true" navigation={this.props.navigation} />
+        <HeaderComponent title="Adventureeeeeee Detail" goBack="true" imageBackground="true" image={require('../assets/images/a-2.jpg')} navigation={this.props.navigation} />
         </View>
         <View style={{marginTop:-70,justifyContent:'center',alignItems:'center'}}>
         <View style={styles.mainIconContainerStyle}>
@@ -28,10 +29,12 @@ class AdventureDetailAboutScreen extends Component {
         <Detail type="surfing" context="The Superbank's break is at the very top of do surf experience for serious surfers.And should you have the good fortune to get on wave" price={{'group':640,'person':64}} hour="2.5" location="Canada"/>
         </View>
         </View>
-        <View style={{position: 'absolute',bottom: 0, top: footerHeihgt-80, width: '100%',zIndex:10}}>
-          <FooterComponent title="Pick Slots" theme="dark" />
-        </View>
+        
       </ScrollView>
+      <View style={{position: 'absolute',bottom: 0, top: footerHeihgt-80, width: '100%',zIndex:10}}>
+          <FooterComponent title="Pick Slots" theme="dark" navigateTo="PickSlot" />
+        </View>
+      </View>
     );
   }
 }

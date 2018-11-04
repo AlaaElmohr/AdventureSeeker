@@ -19,7 +19,7 @@ class AdventureCard extends Component {
        <View style={styles.containerStyle} source={this.props.image}>
          <ImageBackground style={styles.imageStyle} source={this.props.image} imageStyle={{ borderRadius: 10 }}>
            <View style={styles.iconWrapperStyle}>
-             <Icon   name={this.state.icon} type="material-community" containerStyle={styles.iconContainerStyle} size={20}color='#FF4F93' onPress={()=> this.favourite() }/>
+             <Icon name={this.state.icon} type="material-community" containerStyle={styles.iconContainerStyle} size={20}color='#FF4F93' onPress={()=> this.favourite() }/>
            </View>
          </ImageBackground>
         

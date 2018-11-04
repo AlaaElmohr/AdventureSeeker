@@ -33,6 +33,13 @@ const styles = EStyleSheet.create({
       fontSize:15,
       
   },
+  spanStyle:{
+    color:'$fusciaColor',
+    fontFamily:'proxima-nova',
+    fontSize:12,
+    textAlign:'center'
+    
+},
   iconMenuStyle:{
     paddingLeft:10
   },

@@ -34,6 +34,7 @@ class PickAdventuresScreen extends Component {
         </View>
         <View>
         <Button
+          onPress={()=>{this.props.navigation.navigate('Explore')}}
           title="Explore"
           raised
           titleStyle={styles.titleButtonStyle}

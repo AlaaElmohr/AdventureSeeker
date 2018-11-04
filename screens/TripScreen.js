@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
-import { Icon } from 'react-native-elements'
-
-
+import { Text,View } from 'react-native';
+import { Icon } from 'react-native-elements';
+import HeaderComponent from '../components/HeaderComponent';
+import styles from '../styles/TripScreen';
+import TripCardTabView from '../components/TripCardTabView';
 class TripScreen extends Component {
     static navigationOptions = {
         tabBarLabel:'My Trips',
@@ -14,14 +15,19 @@ class TripScreen extends Component {
           inactiveTintColor: '#A6A6A6',
           labelStyle: {
             fontSize: 11,
-            fontFamily: 'proxima-nova'
+            fontFamily: 'proxima-nova-bold'
           },
         },
       };
 
   render() {
     return (
-      <Text>Loka</Text>
+      <View style={{flex:1}}>
+      <HeaderComponent title="My Trips" goBack="true" imageBackground="false"/>
+      <TripCardTabView />
+      
+      </View>
+    
     );
   }
 }

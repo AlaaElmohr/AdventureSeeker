@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Text,View,Image, Dimensions, ScrollView } from 'react-native';
 import { Icon } from 'react-native-elements';
 import Carousel from 'react-native-snap-carousel';
-import { MapView } from 'expo';
+import { MapView, PROVIDER_GOOGLE } from 'expo';
+import mapStyleGray  from '../styles/mapStyleGray';
 
 import TitleWithIcon from './TitleWithIcon';
 const sliderWidth = Dimensions.get('window').width;
@@ -52,7 +53,9 @@ class Detail extends Component {
        </View>
        </View>
        <MapView
-       style={{height:150}}
+       style={{height:200}}
+       customMapStyle={mapStyleGray}
+
         initialRegion={{
          latitude: 37.78825,
          longitude: -122.4324,

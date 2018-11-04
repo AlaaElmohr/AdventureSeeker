@@ -9,7 +9,9 @@ const styles = EStyleSheet.create({
      padding:4
     },
     buttonStyle:{
-       
+       width:150,
+       borderRadius:10,
+       height:45
     },
     containerStyle:{
        height:80,
