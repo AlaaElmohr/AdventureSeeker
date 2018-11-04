@@ -22,7 +22,7 @@ or
 expo start
 ```
 ## Screen Shot
-                           |                           |                           |  
+col1                       |col2                     col3                          |col4
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
 ![Screenshot](Screenshots/1.png)  |  ![Screenshot](Screenshots/2.png) | ![Screenshot](Screenshots/3.png) | ![Screenshot](Screenshots/4.png)
 ![Screenshot](Screenshots/5.png)  |  ![Screenshot](Screenshots/6.png) | ![Screenshot](Screenshots/7.png) | ![Screenshot](Screenshots/8.png)
