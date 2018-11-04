@@ -104,7 +104,7 @@ class SignUpScreen extends Component {
       </TouchableOpacity>
       <Modal isVisible={this.state.isModalVisible}>
       <View style={{ flex: 1,justifyContent:'flex-end'}}>
-        <CreateStory press={this._toggleModal}/>
+        <CreateProfile press={this._toggleModal}/>
        
       </View>
     </Modal>

@@ -48,12 +48,24 @@ export default class App extends React.Component {
      //SignUp: { screen: SignUpScreen },
      //SignIn: { screen: SignInScreen },
      //PickAdventures: { screen: PickAdventuresScreen },
-    Main: {
+     //AdventuresList: { screen: AdventuresListScreen },
+    Map: { screen: MapScreen},
+          //Trip: { screen: TripScreen },
+          //Profile: { screen: ProfileScreen },
+          //Chat:{screen:ChatScreen},
+          //BucketList:{screen:BucketListScreen},
+          //DestinationsList: { screen: DestinationsListScreen },
+          //AdventureDetail: { screen: AdventureDetailScreen },
+            //AdventureDetailAbout: { screen: AdventureDetailAboutScreen },
+            //PickSlotScreen:{screen:PickSlotScreen},
+            //MyTicketScreen:{screen:MyTicketScreen},
+    //PaymentScreen:{screen:PaymentScreen}
+    /**Main: {
 
         screen: createBottomTabNavigator({
           Explore: {  
-             
-            screen: createStackNavigator({
+            screen: ExploreScreen
+            /**screen: createStackNavigator({
             Explore: { screen: ExploreScreen },
             DestinationsList: { screen: DestinationsListScreen },
             AdventureDetail: { screen: AdventureDetailScreen },
@@ -74,7 +86,7 @@ export default class App extends React.Component {
                 },
               },
             }}
-          )
+            )
           
          },
           AdventuresList: { screen: AdventuresListScreen },
@@ -96,7 +108,7 @@ export default class App extends React.Component {
             tabBarVisible: true
           },
         })
-      }
+      }**/
     }, {
       navigationOptions: {
         tabBarVisible: false 
