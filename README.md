@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-you need to have [Node](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/installation/) on your local machine
+you need to have [Node](https://nodejs.org/en/) on your local machine
 
 ### Installing
 
