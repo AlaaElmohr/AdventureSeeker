@@ -36,12 +36,8 @@ col1                       |col2                       |col3                    
 
 * [ReactNative](https://facebook.github.io/react-native/)
 * [Expo](https://expo.io/)
-* [Redux](https://redux.js.org)
 * [React Native Elements](https://react-native-training.github.io/react-native-elements/docs/0.19.0/getting_started.html)
-* [React Navigation](https://reactnavigation.org/)
-* [Node Js](https://nodejs.org/en/)
-* [MongoDB](https://www.mongodb.com/)
-* [GraphQL](https://graphql.org/)
+* [React Navigation](https://reactnavigation.org/)/)
 * [Design Clone](https://www.uplabs.com/posts/hash-trails-adventure-travel-app-ios)
 
 
